@@ -1,0 +1,9 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "tfa/qr.css" %}">
+<script>var tfaUri = "{{ tfaUri }}";</script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="{% static "tfa/qrcode.min.js" %}"></script>
+<script src="{% static "tfa/qr.js" %}"></script>
+<p>Thanks for registering, {{ username }}! This is where you set up TFA for your account.</p>
+<p>Use Google Authenticator or a similar app to create an account with the QR code below.</p>
+<div id="qrcode"></div>
